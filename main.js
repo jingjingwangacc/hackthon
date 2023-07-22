@@ -36,9 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log('data', data);
         const weatherToday = new Weather(data, 0);
 
-        const symbolDiv = document.createElement('img');
-        document.getElementById('todaysymbol').appendChild(symbolDiv);
-        symbolDiv.setAttribute('src', './symbols/'+ weatherToday.symbol + '.png');
+        const symbolImg = document.createElement('img');
+        document.getElementById('todaysymbol').appendChild(symbolImg);
+        symbolImg.setAttribute('src', './symbols/'+ weatherToday.symbol + '.png');
+        symbolImg.style.width = "100px";
+        symbolImg.style.height = "100px";
 
         document.getElementById('todaytemp').innerText = weatherToday.tempCurrent + ' °C';
         document.getElementById('windspeed').innerText = 'Wind: ' + weatherToday.windSpeed + ' m/s';
@@ -60,9 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
           dayDiv.appendChild(weekDiv);
           weekDiv.innerText = weekDay[dateArray[i].getDay()];
 
-          const symbolDiv = document.createElement('img');
-          dayDiv.appendChild(symbolDiv);
-          symbolDiv.setAttribute('src', './symbols/'+ weather.symbol + '.png');
+          const symbolImg = document.createElement('img');
+          dayDiv.appendChild(symbolImg);
+          symbolImg.setAttribute('src', './symbols/'+ weather.symbol + '.png');
+          symbolImg.style.width = '50px';
+          symbolImg.style.height = '50px';
 
           const divTempMin = document.createElement('div');
           dayDiv.appendChild(divTempMin);

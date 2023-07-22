@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
    url = url.slice(0, -1);
   // console.log(url);
    
-   let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ2IjoxLCJ1c2VyIjoic2VsZi1lbXBsb3llZF93YW5nIiwiaXNzIjoibG9naW4ubWV0ZW9tYXRpY3MuY29tIiwiZXhwIjoxNjkwMDQ5MDg0LCJzdWIiOiJhY2Nlc3MifQ.sIR5uUZHQbl2JJCm6Jj05X4iP3tLh0THFEq_hs3hMtBIgSEjKYK-SqJJFxa4KVde1KNzOW1HmYlgtiWlQraQ7w"
+   let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ2IjoxLCJ1c2VyIjoic2VsZi1lbXBsb3llZF93YW5nIiwiaXNzIjoibG9naW4ubWV0ZW9tYXRpY3MuY29tIiwiZXhwIjoxNjkwMDYwNjE4LCJzdWIiOiJhY2Nlc3MifQ.KyI-tUWdLQ8cTKVt_XdL_Pr9dK3gy7vPbBxp8oPgos4dkEW7C2GR4c_YhCz2d_qbuUOpzC7SkloZ0mzrw1hW4A"
     fetch(url + '/t_2m:C,t_min_2m_24h:C,t_max_2m_24h:C,weather_symbol_24h:idx,wind_speed_10m:ms,precip_24h:mm,uv:idx/34.0522,-118.2437/json?access_token=' + token)
     .then((data) => data.json())
     .then((data) => {

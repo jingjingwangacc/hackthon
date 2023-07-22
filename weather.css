@@ -1,11 +1,84 @@
 .container{
     width: 500px;
+    background-color: rgb(8, 59, 94);
+    color: white;
     border: none;
-    display: flex;
-    flex-wrap: wrap;
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    vertical-align: top;
     justify-content: center;
 }
-.dayDiv{
-    flex: 20%;
+.todaycontainer{
+    height: 100px;
     border: none;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.todaysymbol{
+    flex: 33%;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.todaytemp{
+    font-size: 25px;
+    flex: 33%;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.todaydetail{
+    flex: 33%;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 50px;
+
+}
+.weekcontainer{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-weight: Normal;
+}
+
+.dayDiv{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 20%;
+    
+}
+
+.title{
+    font-weight: bold;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+    
 }

@@ -1,13 +1,18 @@
 class Weather {
   constructor(data, i){
-    this.tempCurrent = data.data[0].coordinates[0].dates[i].value;
-    this.tempMin = data.data[1].coordinates[0].dates[i].value;
-    this.tempMax = data.data[2].coordinates[0].dates[i].value;
+    this.tempCurrent = CtoF(data.data[0].coordinates[0].dates[i].value) + fSign;
+    this.tempMin = CtoF(data.data[1].coordinates[0].dates[i].value) + fSign;
+    this.tempMax = CtoF(data.data[2].coordinates[0].dates[i].value) + fSign;
     this.symbol = data.data[3].coordinates[0].dates[i].value;
     this.windSpeed = data.data[4].coordinates[0].dates[i].value;
     this.prec = data.data[5].coordinates[0].dates[i].value;
     this.uvIndex = data.data[6].coordinates[0].dates[i].value;
   }
+}
+const fSign = ' \u00B0' + 'F'
+console.log(fSign)
+const CtoF = (data) => {
+  return Math.round((data * 9/5) + 32);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         symbolImg.style.width = "100px";
         symbolImg.style.height = "100px";
 
-        document.getElementById('todaytemp').innerText = weatherToday.tempCurrent + ' °C';
+        document.getElementById('todaytemp').innerText = weatherToday.tempCurrent;
         document.getElementById('windspeed').innerText = 'Wind: ' + weatherToday.windSpeed + ' m/s';
         document.getElementById('prec').innerText = 'Precip: ' + weatherToday.prec + ' mm';
         document.getElementById('uvindex').innerText = 'UV Index: ' + weatherToday.uvIndex;
@@ -70,11 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const divTempMin = document.createElement('div');
           dayDiv.appendChild(divTempMin);
-          divTempMin.innerText = weather.tempMin + ' °C';
+          divTempMin.innerText = weather.tempMin;
 
           const divTempMax = document.createElement('div');
           dayDiv.appendChild(divTempMax);
-          divTempMax.innerText = weather.tempMax + ' °C';
+          divTempMax.innerText = weather.tempMax;
 
         }
        

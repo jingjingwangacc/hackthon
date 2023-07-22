@@ -1,4 +1,11 @@
 .container{
     width: 500px;
-    border: 1px solid black;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dayDiv{
+    flex: 20%;
+    border: none;
 }
